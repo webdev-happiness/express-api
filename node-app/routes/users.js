@@ -11,7 +11,7 @@ router.post('/user/register', function(req, res){
   UsersController.register(req,res)
 });
 
-router.post('/user/authentificate', function(req, res){
+router.post('/user/authenticate', function(req, res){
   UsersController.authentificate(req, res)
 });
 
