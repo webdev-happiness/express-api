@@ -9,9 +9,13 @@ var RoadsController = class RoadsController extends AppController {
     * for the controller. Will be required to create
     * an instance of the controller
     */
-   constructor(model) {
-      super(model);
-   }
+    constructor(model) {
+        super(model);
+    }
+
+    getAll(req, res, next){
+        super.getAll(req, res, (params) => {}, [{path:'user'}]);
+    }
 
 }
 

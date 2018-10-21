@@ -29,7 +29,7 @@ AppController = class AppController {
                 next(temp);
                 return res.status(200).send(temp);
             } else {
-                //console.log(err);
+                console.log(err);
                 return res.status(500).send(err);
             }
         });

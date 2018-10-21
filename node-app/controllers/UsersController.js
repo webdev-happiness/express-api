@@ -1,6 +1,9 @@
 const AppController = require('./AppController.js');
 const jwt = require('jsonwebtoken');
 const config = require('../config/main.js');
+const User = require('../models/user');
+
+
 /**
  * The App controller class where other controller inherits or
  * overrides pre defined and existing properties

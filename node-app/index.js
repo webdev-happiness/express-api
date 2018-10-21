@@ -63,7 +63,7 @@ app.use(bodyParser.json());
 // ROUTE
 var user = require('./routes/users.js');
 //var api = require('./routes/secure-routes-example.js');
-//var roads = require('./routes/roads.js');
+var roads = require('./routes/roads.js');
 var todos = require('./routes/todos.js');
 var events = require('./routes/events.js');
 
@@ -72,7 +72,7 @@ var events = require('./routes/events.js');
 app.options('*', cors()); // Pour traiter le pre-flight provenant de l'exterieur (OPTIONS)
 
 app.use(user);
-//app.use(roads);
+app.use(roads);
 app.use(todos);
 app.use(events);
 
