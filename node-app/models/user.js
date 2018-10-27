@@ -20,8 +20,7 @@ var User = new Schema({
         password: {
             type: String,
             required: true
-        },
-        roads:[{ type: Schema.Types.ObjectId, ref: 'Road' }]
+        }
     });
 
     // Saves the user's password hashed (plain text password storage is not good)
