@@ -23,7 +23,7 @@ var Post = new Schema({
         type: String
     },
     user: { type: Schema.Types.ObjectId, ref: 'User', required: true },
-    comments: { type: Schema.Types.ObjectId, ref: 'Comment'},
+    comments: [{ type: Schema.Types.ObjectId, ref: 'Comment'}],
     like: {
         type: Number,
         default: 0

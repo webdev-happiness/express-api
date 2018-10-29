@@ -16,7 +16,13 @@ var PostsController = class PostsController extends AppController {
     }
 
     getAll(req, res, next){
-        super.getAll(req, res, (params) => {}, [{path:'comments', populate : {path : 'user', select: { 'email': 1, 'username': 1} }}]);
+        super.getAll(req, res, 
+            (params) => {}, [
+                {
+                    path:'comments', 
+                    populate : {path : 'user'/*, select: { 'email': 1, 'username': 1}*/ }
+                }
+            ]);
     }
     
 }

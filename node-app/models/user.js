@@ -6,7 +6,7 @@ var Schema = mongoose.Schema;
 // Schema defines how the user data will be stored in MongoDB
 var User = new Schema({
         username: {
-          type:String,
+          type: String,
           lowercase: true,
           unique: true,
           required: true
