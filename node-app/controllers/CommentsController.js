@@ -3,7 +3,7 @@ const AppController = require('./AppController.js');
  * The App controller class where other controller inherits or
  * overrides pre defined and existing properties
  */
-var TodosController = class TodosController extends AppController {
+var CommentsController = class CommentsController extends AppController {
 
     /**
     * @param {Model} model The default model object
@@ -17,4 +17,4 @@ var TodosController = class TodosController extends AppController {
     
 }
 
-module.exports = TodosController;
+module.exports = CommentsController;

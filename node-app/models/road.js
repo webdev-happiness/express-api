@@ -16,10 +16,10 @@ var Road = new Schema({
     description: {
       type: String
     },
-    roads:{
+    routes:{
       type: Array
     },
-    user: { type: Schema.Types.ObjectId, ref: 'User' }
+    user: { type: Schema.Types.ObjectId, ref: 'User', required: true }
 });
 
 var Road = mongoose.model('Road', Road);

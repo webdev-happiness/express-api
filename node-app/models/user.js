@@ -6,7 +6,7 @@ var Schema = mongoose.Schema;
 // Schema defines how the user data will be stored in MongoDB
 var User = new Schema({
         username: {
-          type:String,
+          type: String,
           lowercase: true,
           unique: true,
           required: true
@@ -20,8 +20,7 @@ var User = new Schema({
         password: {
             type: String,
             required: true
-        },
-        roads:[{ type: Schema.Types.ObjectId, ref: 'Road' }]
+        }
     });
 
     // Saves the user's password hashed (plain text password storage is not good)
