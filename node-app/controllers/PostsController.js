@@ -24,6 +24,12 @@ var PostsController = class PostsController extends AppController {
                 }
             ]);
     }
+
+    create(req, res, next) {
+        super.create(req, res, (data) => {
+            io.emit('notification', { 'message': 'Un nouvel article à été publié', 'data':  data});
+        }, [])
+    }
     
 }
 
