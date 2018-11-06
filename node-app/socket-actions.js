@@ -2,8 +2,6 @@ var Post = require('./models/post.js');
 var Controller = require('./controllers/PostsController.js');
 const PostsController = new Controller(Post);
 
-const apiai = require('apiai')("fa942645d24d4d8ab286e6307090afb0");
-
 // SOCKET.IO
 module.exports = io.sockets.on('connection', function (socket) {
     console.log('new user')
@@ -11,7 +9,7 @@ module.exports = io.sockets.on('connection', function (socket) {
 
     // NOTIFICATIONS SYSTEM
       socket.on('like', function(data){
-          console.log('Un user à cliqué sur hit !')
+          console.log(data)
           PostsController.like(data);
       });
 

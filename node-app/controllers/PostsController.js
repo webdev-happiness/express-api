@@ -13,6 +13,7 @@ var PostsController = class PostsController extends AppController {
 
     constructor(model) {
         super(model);
+        this.like = this.like.bind(this)
     }
 
     getAll(req, res, next){
@@ -29,6 +30,12 @@ var PostsController = class PostsController extends AppController {
         super.create(req, res, (data) => {
             io.emit('notification', { 'message': 'Un nouvel article à été publié', 'data':  data});
         }, [])
+    }
+
+    like(data) {
+        this._model.findOneAndUpdate({_id: data}, {$inc: {like: 1}}, function(err, po) {
+            io.emit('liked', data)
+        })
     }
     
 }
